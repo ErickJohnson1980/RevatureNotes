@@ -45,6 +45,7 @@ public class UserCreatedArray {
 		PopulateArray(UserArray);
 		
 		System.out.println("The average of the values in your array is "+ArrayAverage(UserArray));
+		scan.close();
 	}
 	
 }
