@@ -18,7 +18,7 @@ public class GradeCalcChallenge {
 		//This method calculates the percentage grade
 		// First we check to see if the input is correct.
 		if(Points > mPoints)
-		{
+		{ //If points made are higher than the points possible we exit, an A+ can only be achieved with extra credit.
 			System.out.println("Regular Points earned can't be higher than Maximum Points possible! Please Try Again!");
 		     System.exit(0); 
 		}
@@ -75,11 +75,11 @@ public class GradeCalcChallenge {
 	{
         Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Please Enter The Total Amount Of Points Possible. Not Including Extra credit Points");
+		System.out.println("Please Enter The Maximum Amount Of Points Possible. Not Including Extra credit Points");
         double maxPoints = scan.nextDouble();
         System.out.println("Please Enter The Total Amount Of Extra credit Points The Student Received.");
         double ecPoints = scan.nextDouble();
-        System.out.println("Please Enter The Amount Of Points The Student Got. Not Including Extra Credit Points");
+        System.out.println("Please Enter The Amount Of Regular Points The Student Got. Not Including Extra Credit Points");
         double Points = scan.nextDouble();
         scan.close();
         double totalPercent = GradeCalc(ecPoints ,maxPoints , Points);
