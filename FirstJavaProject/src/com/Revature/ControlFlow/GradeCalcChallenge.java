@@ -16,6 +16,12 @@ public class GradeCalcChallenge {
 	public static double GradeCalc(double ec , double mPoints , double Points)
 	{
 		//This method calculates the percentage grade
+		// First we check to see if the input is correct.
+		if(Points > mPoints)
+		{
+			System.out.println("Regular Points earned can't be higher than Maximum Points possible! Please Try Again!");
+		     System.exit(0); 
+		}
 		System.out.println("Doing the math...");
 		Double P= (Points * 100 / mPoints);
 		Double Extra = (ec * 100 / mPoints);
@@ -49,6 +55,10 @@ public class GradeCalcChallenge {
 		 else if((D <= 59)&&(D >= 0))
 		 {
 			 letter = "F";
+		 }
+		 else if(D < 0)
+		 {
+			 letter = "F-";
 		 }
 		 return letter;
 			 /*
